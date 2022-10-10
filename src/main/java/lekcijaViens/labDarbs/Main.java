@@ -73,6 +73,13 @@ public class Main {
         rezultats = 11 % 2;
         System.out.println(rezultats);
 
+//auto
+        String nosaukums = "Audi";
+        String marka = "A6";
+        int autoVecums = 6;
+        double degvielasPaterins = 6.5;
+        boolean tehniskaApskate = true;
+        System.out.println("Nosaukums: " + nosaukums + "Mašīnas Marka: " + marka + "Auto vecums:  " + autoVecums);
 
 
     }
