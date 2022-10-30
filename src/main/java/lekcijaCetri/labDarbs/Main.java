@@ -3,32 +3,18 @@ package lekcijaCetri.labDarbs;
 public class Main {
     public static void main(String[] args) {
         String vards = "Elina";
-        House majaViens = new House();
-        majaViens.adrese = "Brīvības iela 123";
-        majaViens.durvjuSkaits = 5;
-        majaViens.griestuAugstums = 3.2;
-        majaViens.loguSkaits = 10;
-        majaViens.vaiPrivatipasums = true;
-        majaViens.kadastralaVertiba = 10000;
-        majaViens.stavuDaydzums = 2;
 
+        House majaViens = new House(4,10,40,"liepaja",3,40000,true);
 
-        House majaDivi = new House();
-        majaDivi.adrese = "Tallinas iela 123";
-        majaDivi.durvjuSkaits = 3;
-        majaDivi.griestuAugstums = 2.2;
-        majaDivi.loguSkaits = 12;
-        majaDivi.vaiPrivatipasums = false;
-        majaDivi.kadastralaVertiba = 13000;
-        majaDivi.stavuDaydzums = 1;
+        House majaDivi = new House(3,4,5,"Maxima",5,700000,true);
 
-        char [] mansVards = {'E', 'L', 'I',};
-        for(char burts : mansVards){
+        char[] mansVards = {'E', 'L', 'I',};
+        for (char burts : mansVards) {
             System.out.println(burts);
         }
 
-        House [] majas = {majaViens, majaDivi};
-        for (House xx  : majas) {
+        House[] majas = {majaViens, majaDivi};
+        for (House xx : majas) {
             xx.printHouse();
         }
 
@@ -38,6 +24,8 @@ public class Main {
 
         Velosipeds ritenbraucejsViens = new Velosipeds();
         Velosipeds ritenbraucejsDivi = new Velosipeds();
+        Velosipeds ritenix = new Velosipeds("ZZK", 21, 100);
+
         ritenbraucejsViens.atrums = 40;
         ritenbraucejsDivi.atrums = 30;
 
@@ -65,6 +53,20 @@ public class Main {
         ritenbraucejsTris.printAtrums();
 
 
+        Automasina jaunaAuto = new Automasina();
+        jaunaAuto.zimols = "Toyota";
+        jaunaAuto.durvis = 4;
+        jaunaAuto.tehniskaApskate = true;
+        jaunaAuto.printAutomasina();
+
+        Rinkis rinkisViens = new Rinkis(5);
+
+        System.out.println(
+                rinkisViens.rekinatLaukumu()
+        );
+        System.out.println(
+                rinkisViens.rekinatLinijasGarumu()
+        );
 
     }
 }

@@ -1,10 +1,26 @@
 package lekcijaCetri.labDarbs;
 
+import java.util.Date;
+
 public class Velosipeds {
     String zimols;
     int ramjaIzmers;
     int atrums = 0;
+    Date izgatavosanasDatums;
 
+    Velosipeds(){
+        System.out.println( "Taisām jaunu VELO!!!");
+        izgatavosanasDatums = new Date();
+        System.out.println("Izgatavošanas datums " + izgatavosanasDatums);
+    }
+    //konstruktors tiek padots, katru reizi, kad taisa jaunu velo
+
+    Velosipeds(String zimols, int ramjaIzmers, int atrums){
+        izgatavosanasDatums = new Date();
+        this.zimols = zimols;
+        this.ramjaIzmers = ramjaIzmers;
+        this.atrums = atrums;
+    }
     public void printAtrums(){
         System.out.println(atrums);
     }
