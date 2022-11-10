@@ -2,7 +2,7 @@ package lekcijaCetri.labDarbs;
 
 public class Rinkis {
     double r;
-    final double PI = Math.PI;
+    final double PI = 3.14;
     //final, lai neviens nevarētu mainīt
 
 
