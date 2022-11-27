@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPage {
-    WebDriver parluks;
+public class LoginPage extends BasePage {
+
     private By usernameInputField = By.id("user-name");
     private By passwordInputField = By.id("password");
     private By loginButton = By.id("login-button");
@@ -18,22 +18,26 @@ public class LoginPage {
         getLoginButton().click();
     }
     public String getErrorText(){
-        return parluks.findElement(errorTextField).getText();
+
+        return driver.findElement(errorTextField).getText();
     }
 
     public WebElement getUsernameField(){
-        return parluks.findElement(usernameInputField);
+
+        return driver.findElement(usernameInputField);
     }
     public WebElement getPasswordField(){
-        return parluks.findElement(passwordInputField);
+        return driver.findElement(passwordInputField);
     }
     public WebElement getLoginButton(){
-        return parluks.findElement(loginButton);
+
+        return driver.findElement(loginButton);
     }
 
 
 
     public LoginPage(WebDriver parluks) {
-        this.parluks = parluks;
+
+        super(parluks);
     }
 }

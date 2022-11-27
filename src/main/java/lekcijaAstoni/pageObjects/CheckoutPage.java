@@ -4,22 +4,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CheckoutPage {
-    WebDriver driver;
+public class CheckoutPage extends BasePage {
 
-    private By pageTitle  = By.className("title");
     private By continueButton = By.id("continue");
 
     private By errorText = By.cssSelector("h3");
     private By firstNameInputField = By.id("first-name");
 
+    public CheckoutPage(WebDriver parluks) {
+        super(parluks);
+    }
+
     public void setInputFirstName(String a){
+
         driver.findElement(firstNameInputField).sendKeys("name");
     }
 
-    public WebElement getPageTitle (){
-        return driver.findElement(pageTitle);
-    }
     public void clickContinueButton(){
         driver.findElement(continueButton).click();
     }
@@ -27,7 +27,4 @@ public class CheckoutPage {
         return driver.findElement(errorText).getText();
     }
 
-    public CheckoutPage(WebDriver driver) {
-        this.driver = driver;
-    }
 }
